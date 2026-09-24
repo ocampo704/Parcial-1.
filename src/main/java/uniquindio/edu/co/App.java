@@ -1,3 +1,5 @@
+package uniquindio.edu.co;
+
 import javax.swing.JOptionPane;
 
 public class App {
