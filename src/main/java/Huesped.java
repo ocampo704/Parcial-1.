@@ -1,119 +1,77 @@
-import java.util.ArrayList;
+public class Huesped {
 
-public class StayPlus {
+    private String nombre;
+    private int documento;
+    private int telefono;
+    private String correoElectronico;
+    private String procedencia;
 
-    public String nombre;
-    public int nit;
-    public String direccion;
-    public int telefono;
-    public String paginaWeb;
-    private ArrayList<Huesped> listHuespedes;
-    private ArrayList<Reserva> listReservas;
-    private ArrayList<Habitacion> listHabitaciones;
-    private ArrayList<Servicio> listServicios;
+    /**
+     * metodo constructor de la clase Huesped
+     * @param nombre del huesped
+     * @param documento del huesped
+     * @param telefono del huesped
+     * @param correoElectronico del huesped
+     * @param procedencia del huesped
+     */
+    public Huesped ( String nombre, int documento, int telefono, String correoElectronico, String procedencia){
 
-    public StayPlus(String nombre, int nit, String direccion, int telefono, String paginaWeb) {
         this.nombre = nombre;
-        this.nit = nit;
-        this.direccion = direccion;
+        this.documento = documento;
         this.telefono = telefono;
-        this.paginaWeb = paginaWeb;
+        this.correoElectronico = correoElectronico;
+        this.procedencia = procedencia;
 
-        this.listHuespedes = new ArrayList<>();
-        this.listReservas = new ArrayList<>();
-        this.listHabitaciones = new ArrayList<>();
-        this.listServicios = new ArrayList<>();
     }
 
-    public void registrarHuesped(String nombre, int documento, int telefono,
-                                 String correoElectronico, String paisProcedencia) {
-
-        Huesped huesped = new Huesped(
-                nombre,
-                documento,
-                telefono,
-                correoElectronico,
-                paisProcedencia
-        );
-
-        listHuespedes.add(huesped);
+    public String getNombre() {
+        return nombre;
     }
 
-    public void crearReserva(int codigo, String fechaRealizacion,
-                             String fechaEntrada, String fechaSalida,
-                             String estado, String metodoPago,
-                             double valorTotal) {
-
-        Reserva reserva = new Reserva(
-                codigo,
-                fechaRealizacion,
-                fechaEntrada,
-                fechaSalida,
-                estado,
-                metodoPago,
-                valorTotal
-        );
-
-        listReservas.add(reserva);
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
     }
 
-    public void registrarHabitacion(int numero, int piso,
-                                    String tipoHabitacion,
-                                    int capacidadMaxima,
-                                    double precioNoche,
-                                    String disponibilidad,
-                                    String estado) {
-
-        Habitacion habitacion = new Habitacion(
-                numero,
-                piso,
-                tipoHabitacion,
-                capacidadMaxima,
-                precioNoche,
-                disponibilidad,
-                estado
-        );
-
-        listHabitaciones.add(habitacion);
+    public int getDocumento() {
+        return documento;
     }
 
-    public void registrarServicio(int codigo, String nombre,
-                                  String descripcion,
-                                  double precio,
-                                  String disponibilidad) {
-
-        Servicio servicio = new Servicio(
-                codigo,
-                nombre,
-                descripcion,
-                precio,
-                disponibilidad
-        );
-
-        listServicios.add(servicio);
+    public void setDocumento(int documento) {
+        this.documento = documento;
     }
 
-    public Reserva buscarReserva(int codigo) {
-
-        for (Reserva reserva : listReservas) {
-
-            if (reserva.getCodigo() == codigo) {
-                return reserva;
-            }
-        }
-
-        return null;
+    public int getTelefono() {
+        return telefono;
     }
 
-    public Reserva eliminarReserva(int codigo) {
+    public void setTelefono(int telefono) {
+        this.telefono = telefono;
+    }
 
-        Reserva reserva = buscarReserva(codigo);
+    public String getCorreoElectronico() {
+        return correoElectronico;
+    }
 
-        if (reserva != null) {
-            listReservas.remove(reserva);
-            return reserva;
-        }
+    public void setCorreoElectronico(String correoElectronico) {
+        this.correoElectronico = correoElectronico;
+    }
 
-        return null;
+    public String getProcedencia() {
+        return procedencia;
+    }
+
+    public void setProcedencia(String procedencia) {
+        this.procedencia = procedencia;
+    }
+
+    @Override
+    public String toString() {
+        return "Huesped{" +
+                "nombre='" + nombre + '\'' +
+                ", documento=" + documento +
+                ", telefono=" + telefono +
+                ", correoElectronico='" + correoElectronico + '\'' +
+                ", procedencia='" + procedencia + '\'' +
+                '}';
     }
 }
