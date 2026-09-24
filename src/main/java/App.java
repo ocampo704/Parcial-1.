@@ -12,7 +12,7 @@ public class App {
                 "www.stayplus.com"
         );
 
-        int opcion;
+        int opcion = -1;
 
         do {
 
@@ -60,15 +60,13 @@ public class App {
 
                     int documento = Integer.parseInt(documentoTexto);
 
-                    String telefonoTexto = JOptionPane.showInputDialog(
+                    String telefono = JOptionPane.showInputDialog(
                             "Ingrese el teléfono:"
                     );
 
-                    if (telefonoTexto == null) {
+                    if (telefono == null) {
                         break;
                     }
-
-                    int telefono = Integer.parseInt(telefonoTexto);
 
                     String correo = JOptionPane.showInputDialog(
                             "Ingrese el correo electrónico:"
@@ -101,24 +99,22 @@ public class App {
 
                     break;
 
-
                 case 2:
 
-                    String documentoHuespedTexto = JOptionPane.showInputDialog(
-                            "Ingrese el documento del huésped:"
-                    );
+                    String documentoHuespedTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el documento del huésped:"
+                            );
 
                     if (documentoHuespedTexto == null) {
                         break;
                     }
 
-                    int documentoHuesped = Integer.parseInt(
-                            documentoHuespedTexto
-                    );
+                    int documentoHuesped =
+                            Integer.parseInt(documentoHuespedTexto);
 
-                    Huesped huesped = stayPlus.buscarHuesped(
-                            documentoHuesped
-                    );
+                    Huesped huesped =
+                            stayPlus.buscarHuesped(documentoHuesped);
 
                     if (huesped == null) {
 
@@ -130,21 +126,20 @@ public class App {
                         break;
                     }
 
-                    String numeroHabitacionTexto = JOptionPane.showInputDialog(
-                            "Ingrese el número de la habitación:"
-                    );
+                    String numeroHabitacionTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el número de la habitación:"
+                            );
 
                     if (numeroHabitacionTexto == null) {
                         break;
                     }
 
-                    int numeroHabitacion = Integer.parseInt(
-                            numeroHabitacionTexto
-                    );
+                    int numeroHabitacion =
+                            Integer.parseInt(numeroHabitacionTexto);
 
-                    Habitacion habitacion = stayPlus.buscarHabitacion(
-                            numeroHabitacion
-                    );
+                    Habitacion habitacion =
+                            stayPlus.buscarHabitacion(numeroHabitacion);
 
                     if (habitacion == null) {
 
@@ -156,9 +151,10 @@ public class App {
                         break;
                     }
 
-                    String codigoTexto = JOptionPane.showInputDialog(
-                            "Ingrese el código de la reserva:"
-                    );
+                    String codigoTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el código de la reserva:"
+                            );
 
                     if (codigoTexto == null) {
                         break;
@@ -166,57 +162,62 @@ public class App {
 
                     int codigo = Integer.parseInt(codigoTexto);
 
-                    String fechaRealizacion = JOptionPane.showInputDialog(
-                            "Ingrese la fecha de realización:"
-                    );
+                    String fechaRealizacion =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese la fecha de realización:"
+                            );
 
                     if (fechaRealizacion == null) {
                         break;
                     }
 
-                    String fechaEntrada = JOptionPane.showInputDialog(
-                            "Ingrese la fecha de entrada:"
-                    );
+                    String fechaEntrada =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese la fecha de entrada:"
+                            );
 
                     if (fechaEntrada == null) {
                         break;
                     }
 
-                    String fechaSalida = JOptionPane.showInputDialog(
-                            "Ingrese la fecha de salida:"
-                    );
+                    String fechaSalida =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese la fecha de salida:"
+                            );
 
                     if (fechaSalida == null) {
                         break;
                     }
 
-                    String estadoReserva = JOptionPane.showInputDialog(
-                            "Ingrese el estado de la reserva:"
-                    );
+                    String estadoReserva =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el estado de la reserva:"
+                            );
 
                     if (estadoReserva == null) {
                         break;
                     }
 
-                    String metodoPago = JOptionPane.showInputDialog(
-                            "Ingrese el método de pago:"
-                    );
+                    String metodoPago =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el método de pago:"
+                            );
 
                     if (metodoPago == null) {
                         break;
                     }
 
-                    String valorTotalTexto = JOptionPane.showInputDialog(
-                            "Ingrese el valor total:"
-                    );
+                    String valorTotalTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el valor total:"
+                            );
 
                     if (valorTotalTexto == null) {
                         break;
                     }
 
-                    double valorTotal = Double.parseDouble(
-                            valorTotalTexto
-                    );
+                    double valorTotal =
+                            Double.parseDouble(valorTotalTexto);
 
                     stayPlus.crearReserva(
                             codigo,
@@ -240,9 +241,10 @@ public class App {
 
                 case 3:
 
-                    String numeroTexto = JOptionPane.showInputDialog(
-                            "Ingrese el número de la habitación:"
-                    );
+                    String numeroTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el número de la habitación:"
+                            );
 
                     if (numeroTexto == null) {
                         break;
@@ -250,9 +252,10 @@ public class App {
 
                     int numero = Integer.parseInt(numeroTexto);
 
-                    String pisoTexto = JOptionPane.showInputDialog(
-                            "Ingrese el piso:"
-                    );
+                    String pisoTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el piso:"
+                            );
 
                     if (pisoTexto == null) {
                         break;
@@ -260,37 +263,38 @@ public class App {
 
                     int piso = Integer.parseInt(pisoTexto);
 
-                    String tipoHabitacion = JOptionPane.showInputDialog(
-                            "Ingrese el tipo de habitación:"
-                    );
+                    String tipoHabitacion =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el tipo de habitación:"
+                            );
 
                     if (tipoHabitacion == null) {
                         break;
                     }
 
-                    String capacidadTexto = JOptionPane.showInputDialog(
-                            "Ingrese la capacidad máxima:"
-                    );
+                    String capacidadTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese la capacidad máxima:"
+                            );
 
                     if (capacidadTexto == null) {
                         break;
                     }
 
-                    int capacidadMaxima = Integer.parseInt(
-                            capacidadTexto
-                    );
+                    int capacidadMaxima =
+                            Integer.parseInt(capacidadTexto);
 
-                    String precioTexto = JOptionPane.showInputDialog(
-                            "Ingrese el precio por noche:"
-                    );
+                    String precioTexto =
+                            JOptionPane.showInputDialog(
+                                    "Ingrese el precio por noche:"
+                            );
 
                     if (precioTexto == null) {
                         break;
                     }
 
-                    double precioNoche = Double.parseDouble(
-                            precioTexto
-                    );
+                    double precioNoche =
+                            Double.parseDouble(precioTexto);
 
                     String disponibilidadHabitacion =
                             JOptionPane.showInputDialog(
@@ -339,9 +343,8 @@ public class App {
                         break;
                     }
 
-                    int codigoServicio = Integer.parseInt(
-                            codigoServicioTexto
-                    );
+                    int codigoServicio =
+                            Integer.parseInt(codigoServicioTexto);
 
                     String nombreServicio =
                             JOptionPane.showInputDialog(
@@ -370,9 +373,8 @@ public class App {
                         break;
                     }
 
-                    double precioServicio = Double.parseDouble(
-                            precioServicioTexto
-                    );
+                    double precioServicio =
+                            Double.parseDouble(precioServicioTexto);
 
                     String disponibilidadServicio =
                             JOptionPane.showInputDialog(
@@ -410,13 +412,11 @@ public class App {
                         break;
                     }
 
-                    int codigoBuscar = Integer.parseInt(
-                            codigoBuscarTexto
-                    );
+                    int codigoBuscar =
+                            Integer.parseInt(codigoBuscarTexto);
 
-                    Reserva reserva = stayPlus.buscarReserva(
-                            codigoBuscar
-                    );
+                    Reserva reserva =
+                            stayPlus.buscarReserva(codigoBuscar);
 
                     if (reserva != null) {
 
@@ -447,14 +447,11 @@ public class App {
                         break;
                     }
 
-                    int codigoEliminar = Integer.parseInt(
-                            codigoEliminarTexto
-                    );
+                    int codigoEliminar =
+                            Integer.parseInt(codigoEliminarTexto);
 
                     Reserva reservaEliminada =
-                            stayPlus.eliminarReserva(
-                                    codigoEliminar
-                            );
+                            stayPlus.eliminarReserva(codigoEliminar);
 
                     if (reservaEliminada != null) {
 
