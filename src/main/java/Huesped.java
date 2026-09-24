@@ -2,26 +2,18 @@ public class Huesped {
 
     private String nombre;
     private int documento;
-    private int telefono;
+    private String telefono;
     private String correoElectronico;
     private String procedencia;
 
-    /**
-     * metodo constructor de la clase Huesped
-     * @param nombre del huesped
-     * @param documento del huesped
-     * @param telefono del huesped
-     * @param correoElectronico del huesped
-     * @param procedencia del huesped
-     */
-    public Huesped ( String nombre, int documento, int telefono, String correoElectronico, String procedencia){
+    public Huesped(String nombre, int documento, String telefono,
+                   String correoElectronico, String procedencia) {
 
         this.nombre = nombre;
         this.documento = documento;
         this.telefono = telefono;
         this.correoElectronico = correoElectronico;
         this.procedencia = procedencia;
-
     }
 
     public String getNombre() {
@@ -40,11 +32,11 @@ public class Huesped {
         this.documento = documento;
     }
 
-    public int getTelefono() {
+    public String getTelefono() {
         return telefono;
     }
 
-    public void setTelefono(int telefono) {
+    public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
 
@@ -69,7 +61,7 @@ public class Huesped {
         return "Huesped{" +
                 "nombre='" + nombre + '\'' +
                 ", documento=" + documento +
-                ", telefono=" + telefono +
+                ", telefono='" + telefono + '\'' +
                 ", correoElectronico='" + correoElectronico + '\'' +
                 ", procedencia='" + procedencia + '\'' +
                 '}';
