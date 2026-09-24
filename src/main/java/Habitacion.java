@@ -1,5 +1,3 @@
-package co.edu.uniquindio.model;
-
 public class Habitacion {
 
     private int numero;

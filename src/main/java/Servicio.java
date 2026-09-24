@@ -1,5 +1,3 @@
-package co.edu.uniquindio.model;
-
 public class Servicio {
 
     private int codigo;

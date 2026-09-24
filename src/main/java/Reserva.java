@@ -1,5 +1,3 @@
-package co.edu.uniquindio.model;
-
 import java.util.ArrayList;
 
 public class Reserva {
