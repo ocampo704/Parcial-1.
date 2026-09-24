@@ -7,7 +7,6 @@ public class StayPlus {
     public String direccion;
     public int telefono;
     public String paginaWeb;
-
     private ArrayList<Huesped> listHuespedes;
     private ArrayList<Reserva> listReservas;
     private ArrayList<Habitacion> listHabitaciones;
