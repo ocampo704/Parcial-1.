@@ -45,6 +45,7 @@ public class StayPlus {
                              double valorTotal) {
 
         Reserva reserva = new Reserva(
+
                 codigo,
                 fechaRealizacion,
                 fechaEntrada,
