@@ -169,4 +169,25 @@ public class StayPlus {
 
         return null;
     }
+
+    public boolean esNumeroPerfecto(int numero) {
+        if (numero <= 1) return false;
+        int suma = 0;
+        for (int i = 1; i < numero; i++) {
+            if (numero % i == 0) {
+                suma += i;
+            }
+        }
+        return suma == numero;
+    }
+
+    public double calcularIngresosPorFecha(String fecha) {
+        double total = 0;
+        for (Reserva r : listReservas) {
+            if (r.getFechaRealizacion().equals(fecha)) {
+                total += r.getValorTotal();
+            }
+        }
+        return total;
+    }
 }
