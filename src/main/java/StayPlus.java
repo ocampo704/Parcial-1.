@@ -42,7 +42,8 @@ public class StayPlus {
     public void crearReserva(int codigo, String fechaRealizacion,
                              String fechaEntrada, String fechaSalida,
                              String estado, String metodoPago,
-                             double valorTotal) {
+                             double valorTotal, Huesped huesped,
+                             Habitacion habitacion) {
 
         Reserva reserva = new Reserva(
                 codigo,
@@ -51,7 +52,9 @@ public class StayPlus {
                 fechaSalida,
                 estado,
                 metodoPago,
-                valorTotal
+                valorTotal,
+                huesped,
+                habitacion
         );
 
         listReservas.add(reserva);
@@ -112,6 +115,29 @@ public class StayPlus {
         if (reserva != null) {
             listReservas.remove(reserva);
             return reserva;
+        }
+
+        return null;
+    }
+    public Huesped buscarHuesped(int documento) {
+
+        for (Huesped huesped : listHuespedes) {
+
+            if (huesped.getDocumento() == documento) {
+                return huesped;
+            }
+        }
+
+        return null;
+    }
+
+    public Habitacion buscarHabitacion(int numero) {
+
+        for (Habitacion habitacion : listHabitaciones) {
+
+            if (habitacion.getNumero() == numero) {
+                return habitacion;
+            }
         }
 
         return null;
