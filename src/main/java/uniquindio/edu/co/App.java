@@ -12,7 +12,7 @@ public class App {
      * @param args argumentos del programa
      */
     public static void main(String[] args) {
-    public static void main(String[] args) {
+
 
         StayPlus stayPlus = new StayPlus(
                 "StayPlus", 123456789, "Armenia",
