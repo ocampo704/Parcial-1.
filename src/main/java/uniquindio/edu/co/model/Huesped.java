@@ -15,11 +15,7 @@ public class Huesped {
      * @param correoElectronico del huesped
      * @param procedencia del huesped
      */
-<<<<<<< HEAD:src/main/java/Huesped.java
-=======
-
->>>>>>> origin/dev_campo704:src/main/java/uniquindio/edu/co/model/Huesped.java
-    public Huesped(String nombre, int documento, String telefono,
+public Huesped(String nombre, int documento, String telefono,
                    String correoElectronico, String procedencia) {
 
         this.nombre = nombre;
