@@ -28,6 +28,14 @@ public class StayPlus {
         this.listServicios = new ArrayList<>();
     }
 
+    /**
+     * metodo para registrar un huesped
+     * @param nombre del huesped
+     * @param documento del huesped
+     * @param telefono del huesped
+     * @param correoElectronico del huesped
+     * @param paisProcedencia del huesped
+     */
     public void registrarHuesped(String nombre, int documento,
                                  String telefono,
                                  String correoElectronico,
@@ -44,6 +52,11 @@ public class StayPlus {
         listHuespedes.add(huesped);
     }
 
+    /**
+     * metodo para buscar un huesped
+     * @param documento del huesped
+     * @return
+     */
     public Huesped buscarHuesped(int documento) {
 
         for (Huesped huesped : listHuespedes) {
@@ -56,6 +69,11 @@ public class StayPlus {
         return null;
     }
 
+    /**
+     * metodo para buscar un huesped por telefono
+     * @param telefono del huesped
+     * @return
+     */
     public Huesped buscarHuespedPorTelefono(String telefono) {
 
         for (Huesped huesped : listHuespedes) {
@@ -68,6 +86,18 @@ public class StayPlus {
         return null;
     }
 
+    /**
+     * metodo para crear una reserva
+     * @param codigo de la reserva
+     * @param fechaRealizacion de la reserva
+     * @param fechaEntrada de la reserva
+     * @param fechaSalida de la reserva
+     * @param estado de la reserva
+     * @param metodoPago de la reserva
+     * @param valorTotal de la reserva
+     * @param huesped de la reserva
+     * @param habitacion de la reserva
+     */
     public void crearReserva(int codigo,
                              String fechaRealizacion,
                              String fechaEntrada,
@@ -94,6 +124,16 @@ public class StayPlus {
         listReservas.add(reserva);
     }
 
+    /**
+     * metodo para registrar una habitacion
+     * @param numero de la habitacion
+     * @param piso de la habitacion
+     * @param tipoHabitacion de la habitacion
+     * @param capacidadMaxima de la habitacion
+     * @param precioNoche de la habitacion
+     * @param disponibilidad de la habitacion
+     * @param estado de la habitacion
+     */
     public void registrarHabitacion(int numero,
                                     int piso,
                                     String tipoHabitacion,
@@ -115,6 +155,11 @@ public class StayPlus {
         listHabitaciones.add(habitacion);
     }
 
+    /**
+     * metodo para buscar una habitacion
+     * @param numero de la habitacion
+     * @return
+     */
     public Habitacion buscarHabitacion(int numero) {
 
         for (Habitacion habitacion : listHabitaciones) {
