@@ -1,5 +1,6 @@
 import javax.swing.JOptionPane;
 
+
 public class App {
     public static void main(String[] args) {
         StayPlus stayPlus = new StayPlus("StayPlus", 123456789, "Armenia", 1234567, "www.stayplus.com");

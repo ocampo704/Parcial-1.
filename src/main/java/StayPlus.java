@@ -13,6 +13,14 @@ public class StayPlus {
     private ArrayList<Habitacion> listHabitaciones;
     private ArrayList<Servicio> listServicios;
 
+    /**
+     * metodo constructor de la clase StayPlus
+     * @param nombre de StayPlus
+     * @param nit de StayPlus
+     * @param direccion de StayPlus
+     * @param telefono de StayPlus
+     * @param paginaWeb de StayPlus
+     */
     public StayPlus(String nombre, int nit, String direccion,
                     int telefono, String paginaWeb) {
 
