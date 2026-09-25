@@ -2,9 +2,16 @@ package uniquindio.edu.co;
 
 import javax.swing.JOptionPane;
 import uniquindio.edu.co.model.*;
-
+/**
+ * clase principal del programa StayPlus
+ */
 public class App {
 
+    /**
+     * metodo principal que muestra el menu y permite ejecutar las opciones del programa
+     * @param args argumentos del programa
+     */
+    public static void main(String[] args) {
     public static void main(String[] args) {
 
         StayPlus stayPlus = new StayPlus(

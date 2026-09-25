@@ -7,6 +7,15 @@ public class Huesped {
     private String correoElectronico;
     private String procedencia;
 
+    /**
+     * metodo constructor de la clase Huesped
+     * @param nombre del huesped
+     * @param documento del huesped
+     * @param telefono del huesped
+     * @param correoElectronico del huesped
+     * @param procedencia del huesped
+     */
+
     public Huesped(String nombre, int documento, String telefono,
                    String correoElectronico, String procedencia) {
 
