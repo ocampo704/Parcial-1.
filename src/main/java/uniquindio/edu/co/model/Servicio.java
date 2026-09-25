@@ -1,3 +1,4 @@
+package uniquindio.edu.co.model;
 public class Servicio {
 
     private int codigo;

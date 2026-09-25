@@ -1,5 +1,5 @@
+package uniquindio.edu.co.model;
 public class Habitacion {
-
     private int numero;
     private int piso;
     private String tipoHabitacion;

@@ -1,3 +1,5 @@
+package uniquindio.edu.co.model;
+
 import java.util.ArrayList;
 
 public class StayPlus {
@@ -242,6 +244,7 @@ public class StayPlus {
     }
 
     /**
+<<<<<<< HEAD:src/main/java/StayPlus.java
      * metodo para buscar numero perfecto
      * @param numero telefono
      * @return
@@ -250,14 +253,32 @@ public class StayPlus {
         if (numero <= 1) return false;
         int suma = 0;
         for (int i = 1; i < numero; i++) {
+=======
+     * metodo que verifica si un numero es perfecto
+     * @param telefono numero que se va a verificar
+     * @return true si el numero es perfecto
+     */
+    public boolean esNumeroPerfecto(String telefono) {
+
+        int numero = Integer.parseInt(telefono);
+        int suma = 0;
+
+        for (int i = 1; i < numero; i++) {
+
+>>>>>>> origin/dev_campo704:src/main/java/uniquindio/edu/co/model/StayPlus.java
             if (numero % i == 0) {
                 suma += i;
             }
         }
+<<<<<<< HEAD:src/main/java/StayPlus.java
+=======
+
+>>>>>>> origin/dev_campo704:src/main/java/uniquindio/edu/co/model/StayPlus.java
         return suma == numero;
     }
 
     /**
+<<<<<<< HEAD:src/main/java/StayPlus.java
      * metodo para calcular ingresos por fecha
      * @param fecha de reserva
      * @return
@@ -269,6 +290,23 @@ public class StayPlus {
                 total += r.getValorTotal();
             }
         }
+=======
+     * metodo que calcula los ingresos de las reservas realizadas en una fecha
+     * @param fecha fecha de realizacion de las reservas
+     * @return valor total de las reservas
+     */
+    public double calcularIngresosPorFecha(String fecha) {
+
+        double total = 0;
+
+        for (Reserva reserva : listReservas) {
+
+            if (reserva.getFechaRealizacion().equals(fecha)) {
+                total += reserva.getValorTotal();
+            }
+        }
+
+>>>>>>> origin/dev_campo704:src/main/java/uniquindio/edu/co/model/StayPlus.java
         return total;
     }
 }
