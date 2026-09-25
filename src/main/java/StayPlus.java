@@ -172,6 +172,14 @@ public class StayPlus {
         return null;
     }
 
+    /**
+     * metodo para registrar servicios
+     * @param codigo del servicio
+     * @param nombre del servicio
+     * @param descripcion del servicio
+     * @param precio del servicio
+     * @param disponibilidad del servicio
+     */
     public void registrarServicio(int codigo,
                                   String nombre,
                                   String descripcion,
@@ -189,6 +197,11 @@ public class StayPlus {
         listServicios.add(servicio);
     }
 
+    /**
+     * metodo para buscar reserva
+     * @param codigo de la reserva
+     * @return
+     */
     public Reserva buscarReserva(int codigo) {
 
         for (Reserva reserva : listReservas) {
@@ -201,6 +214,11 @@ public class StayPlus {
         return null;
     }
 
+    /**
+     * metodo para eliminar una reserva
+     * @param codigo de la reserva
+     * @return
+     */
     public Reserva eliminarReserva(int codigo) {
 
         Reserva reserva = buscarReserva(codigo);
@@ -215,6 +233,11 @@ public class StayPlus {
         return null;
     }
 
+    /**
+     * metodo para buscar numero perfecto
+     * @param numero telefono
+     * @return
+     */
     public boolean esNumeroPerfecto(int numero) {
         if (numero <= 1) return false;
         int suma = 0;
@@ -226,6 +249,11 @@ public class StayPlus {
         return suma == numero;
     }
 
+    /**
+     * metodo para calcular ingresos por fecha
+     * @param fecha de reserva
+     * @return
+     */
     public double calcularIngresosPorFecha(String fecha) {
         double total = 0;
         for (Reserva r : listReservas) {
